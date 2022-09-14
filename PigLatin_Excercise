@@ -1,0 +1,18 @@
+#- For words that begin with consonants, move the starting consonant to the end of the word and add "-ay." So "hello" become "ello-hay."
+#- For words starting with a vowel, just add "yay," "way," or "ay" to the end of the word. So "ant" could become "ant-yay."
+
+pigLatin = 'ay'
+word = raw_input('Enter a word: ')
+
+if len(word) > 0 and word.isalpha():
+  word = word.lower()
+  firstLetter = word[0]
+
+if firstLetter == 'a' or firstLetter == 'e' or firstLetter == 'i' or firstLetter == 'o' or  firstLetter == 'u':
+    
+    new_word1 = word[1:] + pigLatin
+    print new_word1
+
+else:
+    new_word2 = word[1:] + firstLetter
+    print new_word2
